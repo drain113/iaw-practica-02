@@ -88,7 +88,7 @@ systemctl enable --now php-fpm
 dnf install wget
 #------------------------------------------------------------------------------
 # Instalamos phpMyAdmin
-wget https://www.phpmyadmin.net/downloads/phpMyAdmin-latest-all-languages.tar.gz
+wget https://www.phpmyadmin.net/downloads/phpMyAdmin-latest-all-languages.tar.gz -y
 
 # Descomprimimos el archivo, eliminamos el .gz y movemos los archivos a /usr/share/phpmyadmin
 tar xvf phpMyAdmin-latest-all-languages.tar.gz
@@ -128,7 +128,7 @@ cp ../scripts/conf/phpmyadmin.conf /etc/httpd/conf.d/
 #------------------------------------------------------------------------------
 # Instalación Adminer
 mkdir /var/www/html/adminer && cd /var/www/html/adminer
-wget -O index.php https://github.com/vrana/adminer/releases/download/v4.8.1/adminer-4.8.1-en.php
+wget -O index.php https://github.com/vrana/adminer/releases/download/v4.8.1/adminer-4.8.1-en.php -y
 
 # Damos los permisos
 chown -R apache:apache index.php /var/www/html/adminer/
