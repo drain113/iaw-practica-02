@@ -133,7 +133,7 @@ Si hemos realizado todos los pasos estaremos dentro de la máquina por lo que lo
 
 Este entorno LAMP es una manera sencilla de empezar grandes cosas.
 
-Manejarse por el entorno de máquinas en la nube de AWS puede parecer tedioso al principio pero es un entorno agradable para el usuario con el administrar distinas máquinas al mismo.   
+Manejarse por el entorno de máquinas en la nube de AWS puede parecer tedioso al principio pero es un entorno agradable para el usuario con el que administrar distinas máquinas al mismo.   
 
 <break> </break>
 
