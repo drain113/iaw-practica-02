@@ -30,7 +30,7 @@ Para clonar este repositorio:
 
 
 <details>
-  <summary>Spoiler warning</summary>
+  <summary>Token</summary>
   
   ### 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
   
