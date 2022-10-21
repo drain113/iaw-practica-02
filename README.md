@@ -18,15 +18,28 @@
 
 ### [4. Conectarse a la instancia](#conectarse-a-la-instancia)
 
-### 5. Características de RHEL
+### [5. Una vez dentro](#una-vez-dentro)
 
-### 6. Conclusión
+### [6. Conclusión](#conclusion)
 
 <br>   <br/>  
 
 # Introducción
+Este script hará un deploy de una pila LAMP en el entorno RHEL (CentOS 8).
+Para clonar este repositorio:  
 
 
+<details>
+  <summary>Spoiler warning</summary>
+  
+  ### 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
+  
+</details>   
+
+ <br>   <br/>   
+### **Importante: cambiar la contraseña de MySQL dentro del apartado de variables del comienzo del script**
+
+<br>   <br/>  
 # Creación de la instancia
 El primer paso será crear una nueva instancia desde el menú de la izquierda.  
 
@@ -85,4 +98,45 @@ Una vez hemos creado y configurado nuestra instancia, vamos a conectarnos.
 
 Para ello usaremos la clave privada (token SSH) que hemos generado previamente con el nombre de vockey.
 
-Descargaremos esa clave desde
+Descargaremos esa clave desde la consola de administración de aws academy.
+
+![img](https://lh3.googleusercontent.com/fife/AAbDypAZ2Dl3nERgG-5jsdI9Y4X44UuL-zvIXIfsuLNZdtXMVF3EoFYSOl9ZPUtHKzBoM95gSABQ7kkb-vMbgP_MNp42kkEtosN85GIoDKoXyKXxR9RSBVilCXxVdFSfht-YwQBuDIhFGQstErlY3xxRQduJcFXDwps8WSZ3pu5YWwoM-77V3-beQJiaBep9uedM5exvMJ43rioL-Yq8-WKNYckL8WvJvMpjOHNkIqlzmbtzeBKW1njYCpdKLmmKoL-mCP8Rl97fAKm-ku36MslxHxYsUckwd1H2ylJdpF9mVHyPpvgPHSF8ya4OYaoKwud2crZb1eo6SU7AiuvQgVLugtnX8B5F-s2i038ZeI9wkJZn6ezkSVPjjYqj0u7R7I5D2isW5ViJOwYANfje6L5C95pz7hMSIex1OW7SxX52AxMf45_5K_j2yUVBnSNKxPJW75jwN6QknBlXJ84f4SdROvaq4UeRjA_RmFGkvbaAcoQOSitwETIV1B5HLX1OtcKgTWi6usuz33n2T8hucBaQ03jK4kAjalWqhJCR2qTrmPmKwtk51SACOA0K2yIob9C_xfLuXZ46cmX2xTGGutfjf1ntJbNILUyFxGjuyq3R06ojvniQCS_54rKOjKQjhoyxALWMDYHayki2zTRzXrxj9oMhqJ6DyMmzQfq6yN9VAj7b1GOg7vEToW9UE5KNeRTwLx2UziR5v9Gr-w1HMjkFqszKFL2FmJ3b5BnWhiEoqwzX9njaMMkFJma-9qA137NXd6FriRdDTfzNaJoMSWHqe0VhmHrCVXWf5tVJAMeumWnuU3kvhydkCZX92T-qFY3o_DidTtU5wlemV45WHSe0Ee8izTkoD1DVRPUkqzH_EHtuboEUTtu1PYKa2TC5K9mhrErZ3FtE1amqby3vlvNV0sFeXaAwD64Dmme78WlvgNVWiYXo-Af5o6CWgyyoitxGOzau3E6ClfjTRrnKtkT-Lu9l6KBATSSAa_mDz7Jlm9rh-pi4EntB-czZf552w3dcPrKQH0jEr5l453H1Js6__Zscucbre4l8-rcP03nFp3mU4NORhRqKx_ePzrGh7u9Pqf7oal7m2HyZyWOqcfG25wLMXnQI4mLG0hJcaU8GyzERCIK3IMf1LgFnUxmoty1698RkKdPD4i7fFQZbdrYfz47s1o4NyEipoCZK3GVqAoxi7EbCZnSoPSlngM5x5fLgqs1Trxfuio5-mLlcjN1cJ9KxT0wL3w_RAP72TjjGgnVJDcfFMPAzJhYq7iLi131_g-_8yg0puWCaRIG1ZsRWW-OLz3DsFmW51SE0xsMtFI6L40CVc85hAZrU6tutBiZwWbgTwSQzWRL7rZ2lLT1N34Gw7C5H3Pzw-_XzmhawXATl8ei-r7gbELPQzlZZ_APTYxJ-1wTVJ3tj5kOLLTSOug9oxAurTEDLwtrmzBYaAngj9wpNcbR3nsht1XvV-Sda1DBJ1XfFTcpvqWEgB7GXBQ=w1920-h891)
+
+Una vez descargada, la movemos a un directorio que queramos.
+
+**Mediante SSH**  
+Abrimos una terminal y escribimos   
+"ssh -i "**ruta de clave privada**" **dirección de nuestra máquina**  
+
+**Mediante VS Code**  
+Instalamos el plugin de remote SSH si no lo tenemos y lo abrimos.  
+Veremos que tenemos una pestaña de target ssh vacía, abrimos la configuración y nos dirigimos al archivo ~/.ssh/config para establecer allí la ruta della clave privada y la IP de nuestra máquina.  
+ 
+<break>   </break>  
+<break>   </break>  
+
+
+# Una vez dentro 
+
+Si hemos realizado todos los pasos estaremos dentro de la máquina por lo que los primeros pasos serán instalar git y posteriormente clonar este repositorio.  
+
+``` sudo dnf update -y && sudo dnf upgrade -y``` 
+
+``` sudo dnf install git ```  
+
+``` git clone https://github.com/drain113/iaw-practica-02.git ```  
+ 
+<break>   </break>  
+<break>   </break>  
+
+# Conclusión
+
+Este entorno LAMP es una manera sencilla de empezar grandes cosas.
+
+Manejarse por el entorno de máquinas en la nube de AWS puede parecer tedioso al principio pero es un entorno agradable para el usuario con el administrar distinas máquinas al mismo.   
+
+<break> </break>
+
+-Guille  
+<break>   </break>  
+ [![](https://preview.redd.it/enr7hhg3zku81.png?auto=webp&s=fc017e6a82f91cc81ab3dd7d0388ef57bfd72c30)](https://github.com/drain113)

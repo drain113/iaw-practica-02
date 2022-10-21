@@ -32,7 +32,7 @@
 password=root
 
 #-----------------------------------------------------------------------------#
-# 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
+
 # Limpiamos la terminal y determinamos set -x para ver la lista de comandos ejecutándose.
 
 clear
