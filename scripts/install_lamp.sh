@@ -85,7 +85,7 @@ dnf install php-zip php-json php-fpm -y
 systemctl enable --now php-fpm 
 #------------------------------------------------------------------------------
 #(Instalamos wget)
-dnf install wget
+dnf install wget -y
 #------------------------------------------------------------------------------
 # Instalamos phpMyAdmin
 wget https://www.phpmyadmin.net/downloads/phpMyAdmin-latest-all-languages.tar.gz -y
