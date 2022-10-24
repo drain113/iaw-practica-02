@@ -20,7 +20,7 @@
 
 ### [5. Una vez dentro](#una-vez-dentro)
 
-### [6. Conclusión](#conclusion)
+### [6. Conclusión](#conclusi)
 
 <br>   <br/>  
 
