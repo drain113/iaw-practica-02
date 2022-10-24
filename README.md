@@ -100,7 +100,7 @@ Para ello usaremos la clave privada (token SSH) que hemos generado previamente c
 
 Descargaremos esa clave desde la consola de administración de aws academy.
 
-![img](https://lh3.google.com/u/0/d/1egBH4Rj9y4OkBOAtnzBghVMdaURFV25E=s2048)
+![img](/images/Screenshot_20221021_103004.png)
 
 Una vez descargada, la movemos a un directorio que queramos.
 
