@@ -110,7 +110,7 @@ Abrimos una terminal y escribimos
 
 **Mediante VS Code**  
 Instalamos el plugin de remote SSH si no lo tenemos y lo abrimos.  
-Veremos que tenemos una pestaña de target ssh vacía, abrimos la configuración y nos dirigimos al archivo ~/.ssh/config para establecer allí la ruta della clave privada y la IP de nuestra máquina.  
+Veremos que tenemos una pestaña de target ssh vacía, abrimos la configuración y nos dirigimos al archivo ~/.ssh/config para establecer allí la ruta del la clave privada y la IP de nuestra máquina.  
  
 <break>   </break>  
 <break>   </break>  
