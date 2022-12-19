@@ -59,22 +59,17 @@ semanage fcontext -a -t httpd_sys_rw_content_t '/usr/share/phpmyadmin/'
 semanage fcontext -a -t httpd_sys_rw_content_t '/var/lib/phpmyadmin/'
 restorecon -Rv '/usr/share/phpmyadmin'
 
+# # Seleccionamos la contraseña 
+ mysqladmin -u root password $password
+
 #Importamos el script SQL
 mysql -u root < /usr/share/phpmyadmin/sql/create_tables.sql
-
-#Creamos el usuario de MySQL y asignamos permisos
-mysql -u root <<< "CREATE USER IF NOT EXISTS $db_user@'%' IDENTIFIED BY '$db_password'";
-mysql -u root <<< "GRANT ALL PRIVILEGES ON phpmyadmin.* to $db_user@'%'";
-mysql -u root <<< "FLUSH PRIVILEGES";
-
-# # Seleccionamos la contraseña 
-# mysqladmin -u root password $password
 
 #------------------------------------------------------------------------------
 # Configuramos Apache
 
 # Creamos un archivo de configuración apache
-cp ../scripts/conf/phpmyadmin.conf /etc/httpd/conf.d/
+cp conf/phpmyadmin.conf /etc/httpd/conf.d/
 ------------------------------------------------------------------------------
 
 #------------------------------------------------------------------------------
@@ -86,7 +81,7 @@ mkdir /var/www/html/adminer
 cd /var/www/html/adminer
 
 # Descargamos la versión 4.8.1 de Adminer
-wget https://github.com/vrana/adminer/releases/download/v4.8.1/adminer-4.8.1-en.php -O index.php 
+wget -O index.php https://github.com/vrana/adminer/releases/download/v4.8.1/adminer-4.8.1-en.php -y
 
 # Damos los permisos y asignamos grupo y usuario
 chown -R apache:apache index.php /var/www/html/adminer/
